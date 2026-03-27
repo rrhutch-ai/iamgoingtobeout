@@ -177,12 +177,14 @@ body {
 
 .bot-badge {
   font-family: var(--font-condensed);
-  font-size: 13px;
-  color: var(--color-gray-dark);
-  background-color: var(--color-border);
-  padding: 2px 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 5px 12px;
   border-radius: 4px;
   display: inline-block;
+  margin-top: 4px;
 }
 
 /* === Chat Window === */
