@@ -6,8 +6,8 @@ const CONFIG = {
   institution: 'Southeastern Baptist Theological Seminary',
   avatarSrc: 'assets/images/avatar.jpg',
   avatarFallback: 'RRH',
-  botName: 'SEBTSBot',
-  response: "Ryan Hutchinson is out of the office, but he wanted to say Happy April Fool's Day!"
+  botName: 'HutchBot',
+  response: "I am sorry, I don't know the answer to your question, but Happy April Fool's Day!"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
