@@ -7,7 +7,12 @@ const CONFIG = {
   avatarSrc: 'assets/images/avatar.jpg',
   avatarFallback: 'RRH',
   botName: 'HutchBot',
-  response: "I am sorry, I don't know the answer to your question, but Happy April Fool's Day!"
+  responses: [
+    "I have processed your request. After careful analysis, I have determined that today is April 1st, and Ryan wanted me to wish you a Happy April Fool's Day. Have a productive day.",
+    "I notice you have submitted another inquiry. My response remains the same. Happy April Fool's Day.",
+    "At this point I am just a webpage. Happy April Fool's Day.",
+    "Ryan is no longer fooling around, get back to work, he sees you wasting time."
+  ]
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -69,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (indicator) indicator.remove();
   }
 
+  let queryCount = 0;
+
   chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const text = chatInput.value.trim();
@@ -79,10 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const typingEl = showTypingIndicator();
 
+    const responseIndex = Math.min(queryCount, CONFIG.responses.length - 1);
+    queryCount++;
+
     const delay = 1500 + Math.random() * 1000;
     setTimeout(() => {
       removeTypingIndicator();
-      appendMessage(CONFIG.response, 'bot');
+      appendMessage(CONFIG.responses[responseIndex], 'bot');
     }, delay);
   });
 
