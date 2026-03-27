@@ -60,10 +60,12 @@ body {
 
 .header-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .header-logo {
@@ -77,9 +79,6 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: var(--color-white);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* === Main === */
@@ -334,10 +333,6 @@ body {
 @media (max-width: 479px) {
   .header-title {
     font-size: 16px;
-  }
-
-  .header-logo {
-    height: 42px;
   }
 
   .bot-intro {
